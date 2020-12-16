@@ -46,7 +46,7 @@
 }
 
 .sidebar__chats{
-    overflow: scroll;
+    /* overflow: scroll; */
     background-color: rgb(255, 255, 255);
     flex: 1;
 }
