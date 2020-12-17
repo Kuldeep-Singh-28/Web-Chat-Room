@@ -21,8 +21,20 @@
 }
 
 .login__container > button {
+    font-size: 1.7rem;
     margin-top: 50px;
     text-transform: inherit !important;
     background-color: #0a8448 !important;
     color: #fff;
+}
+
+.login__text {
+    text-transform: uppercase;
+}
+.login__text > p{
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: rgb(74, 172, 95);
+    margin-top: 10px;
+    text-transform: uppercase;
 }

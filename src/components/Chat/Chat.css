@@ -36,17 +36,41 @@
     background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png") ;
     background-repeat: repeat;
     background-position: center;
-    /* overflow: scroll; */
+    overflow: scroll;
+    overflow-x: hidden;
     padding: 30px;
 }
+
+html {
+    --scrollbarBG: #CFD8DC;
+    --thumbBG: #90A4AE;
+  }
+  .chat__body::-webkit-scrollbar {
+    width: 11px;
+  }
+  .chat__body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  }
+  .chat__body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+  .chat__body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+  }
+
 
 .chat__message{
     position: relative;
     padding: 8px;
     background-color: #fff;
+    margin-bottom: 22px;
     border-radius: 10px;
-    width: fit-content;
     font-size: 16px;
+    width: fit-content;
+
 
 }
 .chat__name{
@@ -100,3 +124,4 @@
 .chat__footer > form > input::placeholder {
       text-transform: none;
 }
+

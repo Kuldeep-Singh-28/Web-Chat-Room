@@ -46,8 +46,29 @@
 }
 
 .sidebar__chats{
-    /* overflow: scroll; */
+    overflow: scroll;
+    overflow-x: hidden;
+
     background-color: rgb(255, 255, 255);
     flex: 1;
 }
+html {
+    --scrollbarBG: #CFD8DC;
+    --thumbBG: #90A4AE;
+  }
+  .sidebar__chats::-webkit-scrollbar {
+    width: 11px;
+  }
+  .sidebar__chats {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  }
+  .sidebar__chats::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+  .sidebar__chats::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+  }
 
