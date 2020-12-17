@@ -46,7 +46,7 @@ html {
     --thumbBG: #90A4AE;
   }
   .chat__body::-webkit-scrollbar {
-    width: 11px;
+    width: 9px;
   }
   .chat__body {
     scrollbar-width: thin;
@@ -125,3 +125,21 @@ html {
       text-transform: none;
 }
 
+
+@media screen and (max-width: 641px) {
+    .chat__footer > form > input {
+        padding: 4px;
+    }
+    .chat__header {
+        padding: 1.2rem;
+    }
+    .chat__message{
+        font-size: 13px;
+    }
+    .chat__reciever{
+        font-size: 13px;
+    }
+    .chat__footer{
+        height: 10vh;
+    }
+}

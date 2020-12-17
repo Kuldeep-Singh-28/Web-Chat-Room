@@ -7,6 +7,10 @@
 
 }
 
+.sidebarChat:focus{
+    background-color: #ebebeb;
+
+}
 a{
     text-decoration: none;
     color: black;
