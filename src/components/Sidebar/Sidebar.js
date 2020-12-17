@@ -1,6 +1,7 @@
 import { Avatar, IconButton } from '@material-ui/core';
 import { Chat, DonutLarge, MoreVert, SearchOutlined, Unsubscribe } from '@material-ui/icons';
 import React, { useEffect, useState } from 'react'
+import { useStateValue } from '../../DataLayer/StateProvider';
 import db from '../../firebase';
 import "./Sidebar.css";
 import SidebarChatSection from './SidebarChatSection';
@@ -8,6 +9,8 @@ import SidebarChatSection from './SidebarChatSection';
 function Sidebar() {
 
     const [rooms, setRooms] = useState([]);
+  const [{user}, dispatch] = useStateValue();
+
     useEffect(() => {
         const unsubscribe = db.collection("rooms").onSnapshot((snapshot) =>
             setRooms(snapshot.docs.map((doc) => ({
@@ -26,7 +29,7 @@ function Sidebar() {
     return (
         <div className="sidebar">
             <div className="sidebar__header">
-                <Avatar />
+                <Avatar src={user?.photoURL}/>
                 <div className="sidebar__headerRight">
                     <IconButton>
                         <DonutLarge />
